@@ -9,3 +9,67 @@
 */
 
 /*****Add any custom CSS below this line*****/
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #39393a;
+}
+
+a {
+  color: #39393a;
+}
+
+h1 {
+  font-family: 'Crimson Text', serif;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5rem;
+}
+
+footer {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #111112;
+}
+
+footer a {
+  color: #111112;
+}
+
+.kc-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.kc-container-nowrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.kc-footer-container {
+  display: flex;
+}
+
+.kc-footer-child1 {
+  flex: 3 0 400px;
+}
+
+.kc-footer-child2,
+.kc-footer-child3,
+.kc-footer-child4 {
+  flex: 1 0 auto;
+}
