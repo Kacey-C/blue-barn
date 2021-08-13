@@ -60,16 +60,42 @@ footer a {
   flex-wrap: nowrap;
 }
 
+/* Nav and Footer */
+
+.kc-nav-container {
+  display: flex;
+  text-transform: uppercase;
+  color: #39393a;
+}
+
+.kc-nav-name {
+  letter-spacing: 0.2rem;
+}
+
 .kc-footer-container {
   display: flex;
+  line-height: 1.25rem;
 }
 
 .kc-footer-child1 {
-  flex: 3 0 400px;
+  flex: 3.5 0 400px;
 }
 
 .kc-footer-child2,
-.kc-footer-child3,
-.kc-footer-child4 {
+.kc-footer-child3 {
   flex: 1 0 auto;
+}
+
+.kc-footer-child4 {
+  flex: 0.5 0 auto;
+}
+
+.kc-footer-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.kc-footer-sub-title {
+  font-size: 1rem;
+  font-weight: 700;
 }
