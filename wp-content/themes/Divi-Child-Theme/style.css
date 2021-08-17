@@ -106,3 +106,46 @@ footer a {
     flex: 3.5 0 400px;
   }
 }
+
+/* Product Page */
+
+.kc-product-toc {
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+.kc-product-toc a {
+  padding: 5px;
+  letter-spacing: 0.15rem;
+}
+
+.kc-product-toc a:hover {
+  background-color: #85a5bd;
+  color: #fff;
+  font-weight: 700;
+}
+
+.kc-product-grid h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Individual Product Page */
+.kc-product-head h1 {
+  font-size: 4rem !important;
+  text-align: center;
+}
+
+.kc-back-button {
+  padding: 5px;
+}
+
+.kc-back-button:hover {
+  background-color: #85a5bd;
+  color: #fff;
+  font-weight: 700;
+}
+
+.kc-product-body {
+}
