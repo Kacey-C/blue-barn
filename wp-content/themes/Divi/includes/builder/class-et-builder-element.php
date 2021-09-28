@@ -2082,15 +2082,22 @@ class ET_Builder_Element {
 			// decode HTML entities and remove trailing and leading quote if needed.
 			$processed_attr_value = $need_html_entities_decode ? trim( htmlspecialchars_decode( $attribute_value, ENT_QUOTES ), '"' ) : $attribute_value;
 
+			$field_type = empty( $this->fields_unprocessed[ $attribute_key ]['type'] ) ? '' : $this->fields_unprocessed[ $attribute_key ]['type'];
+
 			// the icon shortcodes are fine.
-			if ( isset( $font_icon_options_as_keys[ $attribute_key ] ) ) {
+			if ( isset( $font_icon_options_as_keys[ $attribute_key ] ) || 'select_icon' === $field_type ) {
 				$shortcode_attributes[ $attribute_key ] = $processed_attr_value;
 				// icon attributes must not be str_replaced.
+
+				// Add responsive and hover types attributes on the font icon options list. Just
+				// assign empty string value because we just need the key.
+				$font_icon_options_as_keys[ "{$attribute_key}_tablet" ] = '';
+				$font_icon_options_as_keys[ "{$attribute_key}_phone" ]  = '';
+				$font_icon_options_as_keys[ "{$attribute_key}__hover" ] = '';
 				continue;
 			}
 
 			// Set empty TinyMCE content '&lt;br /&gt;<br />' as empty string.
-			$field_type = empty( $this->fields_unprocessed[ $attribute_key ]['type'] ) ? '' : $this->fields_unprocessed[ $attribute_key ]['type'];
 			if ( 'tiny_mce' === $field_type && 'ltbrgtbr' === preg_replace( '/[^a-z]/', '', $processed_attr_value ) ) {
 				$processed_attr_value = '';
 			}

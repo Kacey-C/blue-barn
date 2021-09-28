@@ -5163,7 +5163,6 @@ if ( ! function_exists( 'et_builder_get_google_fonts' ) ) :
 		et_builder_google_fonts_sync();
 
 		$google_fonts_cache = get_option( 'et_google_fonts_cache', array() );
-		$google_fonts_cache = et_core_parse_google_fonts_json( $google_fonts_cache );
 
 		if ( ! empty( $google_fonts_cache ) ) {
 			// Use cache if it's not empty.

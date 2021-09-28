@@ -64,8 +64,20 @@ footer a {
 
 .kc-nav-container {
   display: flex;
+  align-items: center;
   text-transform: uppercase;
   color: #39393a;
+}
+
+.kc-nav-icon-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.kc-nav-icon-title > .et_pb_module {
+  margin-right: 0;
 }
 
 .kc-nav-name {
@@ -145,9 +157,6 @@ footer a {
   background-color: #85a5bd;
   color: #fff;
   font-weight: 700;
-}
-
-.kc-product-body {
 }
 
 /* About Page */
